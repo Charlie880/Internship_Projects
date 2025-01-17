@@ -1,0 +1,28 @@
+Machine Learning Feasibility Analysis
+
+    1. Problem Type: Regression or Classification?
+        Analysis:
+        In our dataset, the target variable is selling_price, which is a continuous numerical value that indicates the price of a car. Upon examining the relationships between various features—such as mileage, engine size, max_power, and categorical variables like transmission and owner type—we find that these factors influence the selling price in a continuous or ordinal manner.
+        
+        Decision:
+        This problem is categorized as a regression problem since our goal is to predict a continuous variable, specifically the selling price of cars.
+        
+        Justification"
+        The visualizations and data trends indicate that the dependent variable (selling_price) is indeed continuous and is affected by both numerical and categorical independent variables. Utilizing a regression model will enable us to estimate car prices based on the input features, making it the most suitable approach for this analysis.
+        
+    2. Type of Machine Learning: Supervised or Unsupervised?
+        Analysis:
+        The dataset contains labeled data, with the target variable (selling_price) clearly defined. This allows machine learning models to be trained on the existing relationships between the independent variables (features) and the target variable.
+        
+        Decision:
+        This scenario represents a supervised learning problem because we are using labeled data for training our model.
+        
+        Justification:
+        Supervised learning is ideal for situations where the objective is to predict a specific target variable, especially when there are sufficient labeled examples available for training. In contrast, unsupervised learning techniques, such as clustering or dimensionality reduction, would apply in cases where no labels are present, which does not apply here.
+
+Summary
+Problem Type: Regression
+The task involves predicting a continuous variable: selling_price.
+Learning Type: Supervised
+The dataset consists of labeled data with clear input features and a defined target variable.
+This structured approach ensures that we are well-equipped to build an effective predictive model for car prices using machine learning techniques.

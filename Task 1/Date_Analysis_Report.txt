@@ -1,0 +1,47 @@
+Summary of Observations
+
+1. Data Cleaning and Preprocessing
+    Data Cleaning:
+
+    Whitespace in categorical values was trimmed to ensure consistency.
+    No rows were dropped for duplicates as no exact duplicates were identified across all columns.
+    Missing values were identified in numerical columns like mileage, engine, and max_power. These were filled using the median values to avoid skewing the data.
+
+Categorical Features:
+
+    Key categorical features (seller_type, owner, and transmission) were identified for analysis.
+    These features were encoded as necessary for numerical analysis.
+
+2. Data Visualization
+    Numerical Features:
+
+    mileage (km/ltr/kg): Higher mileage generally corresponds to lower selling prices, indicating that older or more fuel-efficient cars may be priced lower.
+
+    engine (cc): Cars with larger engines (higher displacement) tend to have higher selling prices.
+    
+    max_power (bhp): A strong positive relationship is observed between maximum power and selling price. High-performance cars are priced significantly higher.
+
+    Categorical Features:
+
+    seller_type: Dealer cars tend to have higher average selling prices compared to individual sellers, likely due to better maintenance and warranties.
+    owner: First-owner cars fetch significantly higher selling prices compared to cars with multiple owners.
+    transmission: Automatic transmission cars have higher selling prices than manual ones, reflecting their market preference and added convenience.
+
+    Pairplot Analysis:
+    The scatterplots confirmed the relationships between numerical features and the target variable (selling_price), highlighting trends and outliers.
+    Key Insights and Patterns
+
+    Mileage vs. Price:
+    Cars with higher mileage tend to have lower prices, possibly because mileage is an indicator of age and usage.
+
+    Engine and Power vs. Price:
+    Engine capacity and maximum power are positively correlated with selling price. Premium cars with powerful engines and high performance command higher prices.
+
+    Transmission Impact:
+    Automatic cars are priced higher than manual cars, reflecting a market trend where automatics are viewed as premium offerings.
+
+    Owner and Selling Price:
+    The number of previous owners significantly affects the price, with first-owner cars commanding the highest value.
+
+    Seller Type:
+    Dealers list cars at higher prices than individuals, likely reflecting better-maintained cars with additional assurances.

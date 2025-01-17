@@ -1,0 +1,29 @@
+Data Cleaning and Preprocessing Steps
+  1. Identified the Dataset
+    Loaded the Dataset: The car price prediction dataset was successfully loaded from a CSV file.
+    Explored the Structure: Conducted an initial exploration to understand the dataset's structure, size, and key features.
+    Displayed Summary: Showed the first few rows of the dataset along with a summary that included column data types and counts of missing values.
+  2. Initial Data Cleaning
+    Standardized Text Data: Removed leading and trailing whitespaces from all string columns to ensure uniformity across text data.
+    Handled Duplicates: No duplicate rows were removed, as flagged duplicates were contextually distinct and necessary for analysis.
+  3. Handled Missing Values
+   Numerical Columns:
+    Mileage (km/ltr/kg): Filled missing values with the mean of the column.
+    Engine: Replaced missing values with the mean of the column.
+    Max Power: Extracted numeric values, converted the column to float, and filled missing entries with the mean.
+    Seats: Replaced missing values with the most frequent value (mode) in the column.
+  4. Analyzed Categorical Features
+    Identified Categorical Variables: Recognized seller_type, owner, and transmission as categorical features.
+    Unique Values Analysis:
+      Seller Type: Individual, Dealer.
+      Owner: First Owner, Second Owner, Third Owner, etc.
+      Transmission: Manual, Automatic.
+  5. Preprocessed Categorical Features
+    One-Hot Encoding: Applied one-hot encoding to transform categorical variables into binary columns suitable for machine learning algorithms.
+    Reduced Multicollinearity: Utilized pd.get_dummies() with drop_first=True to minimize multicollinearity issues.
+  6. Validation
+    Post-Cleaning Verification:
+      Confirmed that no missing values remain in the dataset.
+      Ensured all categorical features have been properly encoded into binary format.
+      Checked the updated dataset’s shape and structure to verify successful preprocessing.
+      The dataset is now thoroughly cleaned and preprocessed, making it ready for further analysis, visualization, and modeling. This meticulous approach ensures that we can proceed confidently into the next stages of our machine learning project.
