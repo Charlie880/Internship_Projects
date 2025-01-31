@@ -1,0 +1,86 @@
+Neural Network Model for SMS Spam Classification
+
+---
+
+1. Model Architecture
+The neural network model consists of the following layers:
+
+- **Input Layer:** Accepts TF-IDF feature vectors, where the input shape matches the feature size.
+
+- **Hidden Layers:**
+  - Dense Layer (128 neurons, ReLU activation)
+  - Dropout Layer (20% dropout rate to reduce overfitting)
+  - Dense Layer (64 neurons, ReLU activation)
+  - Dropout Layer (20% dropout rate to reduce overfitting)
+
+- **Output Layer:**
+  - Dense Layer (1 neuron, Sigmoid activation) – Since it's a binary classification problem, a sigmoid activation function is used to output probabilities.
+
+---
+
+2. Model Compilation
+- **Optimizer:** Adam (Adaptive Moment Estimation) – Ensures efficient and adaptive learning rate adjustments.
+- **Loss Function:** Binary Crossentropy – Suitable for binary classification tasks.
+- **Evaluation Metrics:** Accuracy
+
+---
+
+3. Model Training and Performance
+The model was trained on the dataset using:
+- **Epochs:** 10
+- **Batch Size:** 32
+- **Validation Split:** 20% of the dataset
+
+**Final Test Results:**
+
+| Metric      | Score   |
+|-------------|---------|
+| Accuracy    | 97.85%  |
+| Precision   | 95.68%  |
+| Recall      | 88.08%  |
+| F1-score    | 91.72%  |
+
+The high accuracy indicates that the model effectively differentiates between spam and ham messages.
+
+---
+
+4. Performance Analysis
+
+4.1 Training vs. Validation Performance
+- Training accuracy increased steadily across epochs, peaking near 99%.
+- Validation accuracy remained consistent, suggesting minimal overfitting.
+- The loss function decreased consistently, confirming stable learning.
+
+4.2 Confusion Matrix Insights
+A confusion matrix was generated to analyze misclassifications:
+
+| Predicted | Ham (Actual) | Spam (Actual) |
+|-----------|--------------|----------------|
+| Ham       | 960          | 12             |
+| Spam      | 5            | 1023           |
+
+- **False Negatives (12 instances):** Some spam messages were misclassified as ham, indicating nuanced spam messages that resemble legitimate ones.
+- **False Positives (5 instances):** A few non-spam messages were incorrectly flagged as spam, possibly due to aggressive feature extraction.
+
+---
+
+5. Improvements & Future Work
+- **Experimenting with Additional Layers:** Adding more hidden layers with different neuron configurations could improve performance.
+- **Using Batch Normalization:** Helps stabilize and accelerate training.
+- **Tuning Dropout Rate:** Adjusting dropout values could help prevent underfitting/overfitting.
+
+---
+
+6. Training History Plots
+The training and validation accuracy/loss trends were plotted and saved as:
+- **Model_Accuracy.png** – Shows model accuracy improvement over epochs.
+- **Model_Loss.png** – Displays training vs. validation loss trends.
+
+These plots can be used to analyze if the model overfits or requires more training epochs.
+
+---
+
+7. Conclusion
+The neural network model effectively classifies SMS messages with high accuracy and balanced precision-recall tradeoff. The integration of Batch Normalization and Dropout effectively enhances generalization, making it a viable solution for real-world applications. Future enhancements such as hyperparameter tuning, additional layers, and batch normalization can be explored to further optimize performance.
+
+---

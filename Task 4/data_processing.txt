@@ -1,0 +1,35 @@
+Data Preprocessing Analysis
+
+---
+
+Objective:
+The primary goal of the data preprocessing step was to clean and prepare the SMS messages dataset for classification. This involves removing irrelevant information, normalizing text, and converting it into a format that machine learning algorithms can process effectively.
+
+---
+
+Data Cleaning:
+
+1. **Removing Special Characters and Numbers:**
+   - Special characters (e.g., punctuation marks) and numbers were removed from the SMS messages as they do not contribute meaningfully to understanding the content in the context of spam detection. This helps reduce noise in the data, ensuring that only relevant words are considered during modeling.
+
+2. **Stop Words Removal:**
+   - Common words like "the," "is," "in," etc., which are called stop words, were removed from the text. These words appear frequently but do not carry significant meaning and can be safely discarded, improving the efficiency of the model.
+
+3. **Tokenization:**
+   - The cleaned text data was tokenized, meaning the text was split into individual words (tokens). This transformation breaks down the SMS messages into their basic components, allowing the model to focus on the occurrence of specific words rather than the raw sentence structure.
+
+4. **Lemmatization:**
+   - The tokenized words were lemmatized, reducing words to their base or root form. For example, "running" became "run," and "better" became "good." This reduces the dimensionality of the dataset by treating different forms of the same word as a single feature, improving the model’s ability to generalize.
+   - This process was preferred over stemming as lemmatization retains the full meaning of words and ensures that the cleaned text is grammatically correct.
+
+---
+
+Results:
+After applying these preprocessing steps, the dataset was effectively cleaned and transformed into a numerical format that reflects the core content of each SMS message. The lemmatized tokens now represent a streamlined version of the original text, free from irrelevant information and ready for vectorization.
+
+---
+
+Next Steps:
+With the data cleaned and tokenized, the next step in the pipeline is to apply vectorization (either using TF-IDF or Bag of Words) to convert the text data into numerical features that can be fed into machine learning models. This will allow us to capture the most important aspects of each message and use them for classification tasks, such as spam detection.
+
+By preprocessing the SMS messages in this way, we ensure that the data is in an optimal form for training a machine learning model, which is crucial for achieving accurate and reliable predictions.

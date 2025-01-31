@@ -1,0 +1,39 @@
+Model Performance Analysis
+
+---
+
+Logistic Regression:
+- **Accuracy (94.89%):** This high accuracy suggests that Logistic Regression is quite effective at classifying the messages correctly. However, accuracy alone doesn't always reflect the model's performance when there is class imbalance.
+
+- **Precision (96.04%):** Precision tells us that out of all the messages classified as "spam," 96.04% were correctly identified. This indicates that the model is very precise when identifying spam messages, which is good for avoiding false positives (ham messages incorrectly labeled as spam).
+
+- **Recall (64.67%):** The recall of 64.67% indicates that the Logistic Regression model is able to identify about 64.67% of all actual spam messages. This is relatively lower than the precision, meaning the model misses some spam messages (false negatives).
+
+- **F1-score (77.29%):** The F1-score balances precision and recall and is a solid 77.29%. It indicates that the model performs well overall, but there’s room for improvement in recall to reduce false negatives.
+
+---
+
+Naive Bayes:
+- **Accuracy (97.04%):** Naive Bayes achieves even better accuracy than Logistic Regression. This suggests that Naive Bayes is more effective at classifying messages in this specific dataset.
+
+- **Precision (99.16%):** With 99.16% precision, Naive Bayes is extremely good at identifying spam messages. It has a very low false positive rate, meaning it rarely classifies a ham message as spam.
+
+- **Recall (78.67%):** The recall of 78.67% is higher than Logistic Regression, showing that Naive Bayes identifies a larger proportion of the actual spam messages. This results in fewer false negatives compared to Logistic Regression.
+
+- **F1-score (87.73%):** The F1-score of 87.73% shows that Naive Bayes strikes a better balance between precision and recall compared to Logistic Regression, making it a more effective model overall for this task.
+
+---
+
+Comparison and Conclusion:
+- **Accuracy:** Naive Bayes slightly outperforms Logistic Regression in terms of accuracy (97.04% vs. 94.89%).
+
+- **Precision:** Naive Bayes has a significantly higher precision (99.16% vs. 96.04%), making it more reliable for detecting spam without flagging ham messages as spam.
+
+- **Recall:** Naive Bayes also outperforms Logistic Regression in recall (78.67% vs. 64.67%), meaning it captures more spam messages.
+
+- **F1-score:** Naive Bayes again takes the lead in F1-score (87.73% vs. 77.29%), demonstrating that it strikes a better balance between precision and recall.
+
+---
+
+Conclusion:
+While both models perform well, Naive Bayes is the better choice in this case. It has a higher accuracy, precision, recall, and F1-score compared to Logistic Regression, making it more effective for the task of spam classification in SMS messages. Therefore, Naive Bayes would be recommended for deployment in this scenario.
