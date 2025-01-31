@@ -1,0 +1,83 @@
+Final Report: Air Pollutant Data Analysis & Clustering for Unsupervised Machine Learning
+
+---
+
+Objective:
+The objective of this task was to:
+- Preprocess the air pollutant dataset (handling missing values, feature selection, standardization).
+- Apply K-Means Clustering & Hierarchical Clustering to find patterns in air pollution data.
+- Use PCA (Principal Component Analysis) for dimensionality reduction.
+- Implement Anomaly Detection to identify unusual pollution levels.
+
+---
+
+1. Data Preprocessing
+
+**Steps Taken:**
+- Loaded the dataset and examined its structure.
+- Handled missing values:
+  - Used mean imputation for numerical pollutants.
+  - Removed features with excessive missing data.
+- Feature selection:
+  - Retained relevant air pollutants (CO, NOx, SO2, PM2.5, etc.).
+- Standardization:
+  - Applied StandardScaler (mean = 0, variance = 1) to normalize the data for clustering.
+
+---
+
+2. K-Means Clustering
+
+**Methodology:**
+- Used Elbow Method to determine the optimal number of clusters (k).
+- Fit K-Means on standardized pollutant levels.
+- Visualized clusters using scatter plots and heatmaps.
+
+**Findings:**
+- 3-4 clusters were optimal, representing different pollution levels:
+  - Cluster 1: Low pollution
+  - Cluster 2: Moderate pollution
+  - Cluster 3: High pollution
+  - (Sometimes Cluster 4): Extreme pollution in some locations.
+
+---
+
+3. Hierarchical Clustering
+
+**Methodology:**
+- Used Agglomerative Clustering with different linkage methods (ward, complete, average).
+- Plotted dendrograms to visualize cluster merging.
+
+**Findings:**
+- Showed similar patterns as K-Means.
+- Hierarchical clustering was slower but more interpretable than K-Means.
+
+---
+
+4. Principal Component Analysis (PCA)
+
+**Methodology:**
+- Applied PCA to reduce dimensionality while retaining maximum variance.
+- Selected 2-3 principal components (explaining ~85% variance).
+
+**Findings:**
+- PCA allowed better visualization of clusters.
+- The first two principal components captured most of the pollution trends.
+
+---
+
+5. Anomaly Detection
+
+**Methodology:**
+- Used Isolation Forest and Local Outlier Factor (LOF).
+- Flagged outliers in pollution levels.
+
+**Findings:**
+- Anomalies were mostly sudden spikes in pollution, likely due to:
+  - Industrial emissions.
+  - Weather changes.
+  - Sensor errors.
+
+---
+
+Conclusion:
+K-Means and Hierarchical Clustering successfully grouped pollution patterns. PCA reduced data complexity while preserving key information. Anomaly Detection identified pollution spikes, useful for environmental monitoring.

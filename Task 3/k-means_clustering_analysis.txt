@@ -1,0 +1,53 @@
+K-Means Clustering Analysis
+
+---
+
+1. Objective:
+The objective of the analysis was to apply K-Means clustering to the preprocessed air quality dataset, determine the optimal number of clusters, and understand the distinct groupings within the data.
+
+---
+
+2. Optimal Number of Clusters:
+Using the Elbow Method to determine the optimal number of clusters, the plot of inertia (sum of squared distances from points to their respective centroids) against the number of clusters revealed an "elbow" around K = 3. This suggests that 3 clusters is the optimal choice for this dataset, as increasing the number of clusters beyond 3 results in only marginal reductions in inertia.
+
+---
+
+3. Cluster Sizes:
+The K-Means algorithm was then applied with 3 clusters, and the sizes of the resulting clusters were:
+
+- **Cluster 0:** 3,798 data points
+- **Cluster 1:** 366 data points
+- **Cluster 2:** 5,193 data points
+
+Cluster 0 and Cluster 2 are relatively large, while Cluster 1 is much smaller, potentially indicating a minority group or outliers.
+
+---
+
+4. Cluster Centroids:
+The centroids of each cluster represent the mean values of the features in each group. These centroids (standardized values) highlight the differences in the features for each cluster:
+
+- **Cluster 0:** The centroid values suggest moderate levels of pollutants and environmental factors. For example, CO and NOx levels are relatively high, with O3 levels also above average.
+- **Cluster 1:** This cluster shows extreme negative values for several features, indicating very low levels of most pollutants, which might indicate a clean or non-polluted environment.
+- **Cluster 2:** This cluster is characterized by moderate to low pollutant values, similar to Cluster 0, but with distinct differences in specific features like temperature and humidity.
+
+These differences in centroids demonstrate that each cluster represents a distinct grouping of air quality profiles.
+
+---
+
+5. Final Inertia:
+The final inertia value of 46,765.80 indicates the total sum of squared distances between the points and their respective cluster centroids. This value reflects how well the data points fit into the clusters. While a lower inertia is typically desired, it’s essential to balance between inertia and interpretability, especially when choosing the number of clusters.
+
+---
+
+6. Visualization:
+A 2D scatter plot visualized the clusters using the first two features of the dataset. The data points were color-coded by their cluster assignment. The plot showed how the data points from different clusters were distributed and separated, making it easier to interpret the underlying groupings within the dataset.
+
+---
+
+7. Conclusion:
+The analysis successfully identified 3 meaningful clusters within the air quality dataset. The clusters were distinct, with varying characteristics in terms of pollutant levels and environmental factors. The findings indicate the presence of different air quality conditions, which could be useful for further analysis or decision-making related to pollution management.
+
+- Cluster 0 and Cluster 2 represent more polluted areas, with slightly different environmental profiles.
+- Cluster 1 is a distinct, likely less polluted group, which could be of interest for identifying clean environments or anomalies in the data.
+
+These clusters provide a foundation for further exploration, such as identifying geographical regions with similar pollution levels or understanding the impact of specific pollutants in each cluster.

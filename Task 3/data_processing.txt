@@ -1,0 +1,50 @@
+Air Quality Data Preprocessing and Clustering Preparation
+
+---
+
+Objective:
+The primary objective of this task is to preprocess the air quality dataset to ensure it is clean, standardized, and ready for clustering analysis. This involves handling missing values, standardizing numerical features, and saving the processed data for further clustering tasks.
+
+---
+
+Methodology:
+
+1. Loading the Dataset:
+   - The dataset is read from the CSV file while ensuring that headers are properly assigned to the correct columns.
+   - Since the dataset uses ';' as a separator and contains Latin-encoded text, proper encoding is applied.
+   - The dataset’s structure is refined by splitting improperly formatted columns.
+
+2. Date-Time Conversion:
+   - The Date and Time columns are merged into a single Datetime column for easier time-based analysis.
+   - The original Date and Time columns are dropped to maintain a cleaner dataset.
+
+3. Handling Missing Values:
+   - The dataset contains placeholder values (-200) for missing data. These values are replaced with NaN.
+   - All non-datetime columns are converted to numeric types to allow proper calculations.
+   - Missing values (NaNs) are replaced with the mean of the respective columns to ensure consistency.
+
+4. Feature Selection:
+   - The dataset contains multiple sensor readings and pollutant levels. Only relevant columns related to air quality are retained:
+     - CO(GT), PT08.S1(CO), NMHC(GT), C6H6(GT), PT08.S2(NMHC), NOx(GT), PT08.S3(NOx), NO2(GT), PT08.S4(NO2), PT08.S5(O3), Temperature (T), Relative Humidity (RH), and Absolute Humidity (AH).
+   - The Datetime column is retained for potential time-based clustering.
+
+5. Standardization:
+   - Feature values vary in scale; thus, the dataset is standardized using StandardScaler to ensure all features have zero mean and unit variance.
+   - This step is crucial for clustering algorithms, which are sensitive to scale differences.
+
+6. Saving Processed Data:
+   - The cleaned and standardized dataset is saved as Cleaned_AirQuality.csv.
+   - The dataset is now ready for clustering algorithms such as K-Means or Hierarchical Clustering.
+
+---
+
+Key Findings:
+- The dataset contained placeholder missing values (-200), which were replaced with NaNs and subsequently filled with column means to ensure no missing data remains.
+- The Datetime column was successfully converted and retained for potential time-series analysis.
+- After standardization, the dataset is now ready for clustering algorithms such as K-Means, DBSCAN, or Hierarchical Clustering.
+- All features are now numeric, ensuring that distance-based clustering methods will function correctly.
+
+---
+
+Conclusion:
+The preprocessing steps successfully cleaned the dataset, handled missing values, standardized numerical features, and prepared the data for clustering. The processed_air_quality.csv file now contains a standardized dataset, which can be used for clustering methods to identify patterns and structures within air quality data.

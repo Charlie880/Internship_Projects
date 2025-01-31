@@ -1,0 +1,34 @@
+Principal Component Analysis (PCA) Analysis
+
+---
+
+Objective:
+The objective of this analysis was to reduce the dimensionality of the air quality dataset and visualize it in a two-dimensional space, while understanding how much of the dataset's variance is captured by the first two principal components.
+
+---
+
+PCA Transformation:
+- PCA was applied to the standardized air quality dataset, reducing it from multiple dimensions to just two principal components.
+- The transformed data was then visualized in a 2D scatter plot to see how the data points are distributed in this reduced space.
+
+---
+
+Variance Explained:
+- **Principal Component 1 (PC1):**
+  - The first principal component explains 50.65% of the total variance in the dataset. This means that PC1 captures a significant portion of the information and is the most important feature in describing the variability of the data.
+
+- **Principal Component 2 (PC2):**
+  - The second principal component explains 22.65% of the total variance. Although not as significant as PC1, it still contributes meaningfully to the understanding of the dataset’s structure.
+
+- **Total Variance Explained:**
+  - Together, the two principal components explain 73.30% of the total variance in the dataset. This indicates that more than 70% of the data’s information is captured in just two dimensions, which is a strong result for dimensionality reduction.
+
+---
+
+Visualization:
+- The 2D scatter plot of the transformed data clearly shows how the data points are spread across the two principal components. This visualization helps to identify patterns or clustering behavior in the data, which may not have been immediately apparent in the original higher-dimensional space.
+
+---
+
+Conclusion:
+The PCA analysis successfully reduced the dimensionality of the air quality dataset while retaining over 73% of the variance. This reduced representation captures most of the significant patterns in the data, and the 2D visualization provides a clearer understanding of how the data points are distributed in the transformed space. The high variance explained by the first two components suggests that the dataset’s key features are well-represented in this reduced form, which could be useful for further analysis, including clustering or classification tasks.

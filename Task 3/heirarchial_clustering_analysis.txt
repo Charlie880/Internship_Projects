@@ -1,0 +1,57 @@
+Hierarchical Clustering Analysis
+
+---
+
+1. Objective:
+The objective of this analysis was to apply Hierarchical Clustering to the preprocessed air quality dataset, determine the optimal number of clusters, and analyze the hierarchical relationships within the data to understand the underlying structure of air quality conditions.
+
+---
+
+2. Dendrogram and Optimal Number of Clusters:
+To determine the optimal number of clusters, we used a dendrogram, which visually represents the merging process of clusters. By observing the dendrogram, we identified a significant gap or "cut" between clusters at K = 3, suggesting that 3 clusters would be ideal for dividing the data. The dendrogram revealed that with fewer clusters, the distance between merged clusters grows significantly, indicating meaningful separations.
+
+---
+
+3. Cluster Sizes:
+Hierarchical clustering with 3 clusters resulted in the following sizes for each cluster:
+
+- **Cluster 0:** 4,205 data points
+- **Cluster 1:** 1,732 data points
+- **Cluster 2:** 3,420 data points
+
+Cluster 0 is the largest, encompassing more than half of the dataset, while Cluster 1 is the second largest with a moderate number of data points. Cluster 2 is also relatively large, but smaller than Cluster 0. The distribution suggests that Cluster 0 represents the predominant air quality profile in the dataset.
+
+---
+
+4. Cluster Characteristics:
+The characteristics of each cluster were analyzed based on the centroid (mean) values of the features within each group. Below are the distinguishing features of each cluster:
+
+- **Cluster 0:** This cluster has moderate levels of pollutants like CO, NOx, and O3, indicating areas with moderate air pollution. The temperature and humidity levels are also typical, which may represent urban areas with mixed pollution sources.
+  
+- **Cluster 1:** This cluster is characterized by low pollutant levels across the board, particularly CO and NOx. This suggests it corresponds to cleaner environments, possibly rural or suburban areas with minimal industrial activity. The temperature and humidity levels are also lower compared to other clusters.
+  
+- **Cluster 2:** This cluster has moderate to high levels of pollutants, similar to Cluster 0, but with slightly higher levels of O3 and NOx. The temperature and humidity levels are also on the higher end, indicating potential urban areas or industrial zones with higher pollution levels.
+
+These differences in features across clusters highlight the range of air quality profiles in the dataset, from clean to more polluted environments.
+
+---
+
+5. Final Inertia:
+The final inertia for the hierarchical clustering model was calculated, but since this method does not directly minimize inertia like K-Means, the interpretation focuses more on cluster cohesion and separation. The separation between clusters, as shown in the dendrogram, is clear, suggesting that the hierarchical approach has successfully identified meaningful clusters that differentiate air quality conditions.
+
+---
+
+6. Visualization:
+The dendrogram was plotted to visually represent the merging process. It showed the step-by-step linkage of data points, with significant jumps indicating distinct clusters. The dendrogram confirmed that 3 clusters could be optimally chosen by observing where the longest vertical lines occur, indicating the largest distances between merged clusters.
+
+---
+
+7. Conclusion:
+Hierarchical clustering effectively identified 3 distinct groups within the air quality dataset. These groups represent varying levels of air pollution and environmental conditions:
+
+- Cluster 0 and Cluster 2 represent areas with moderate to high pollution levels, reflecting urban or industrial regions with significant environmental impact.
+- Cluster 1 represents clean or less-polluted areas, potentially rural or suburban regions with healthier air quality.
+
+The dendrogram analysis provided a clear visual representation of the cluster relationships, and the cluster sizes and characteristics offered further insights into the dataset's underlying structure. The findings could be useful for identifying regions with similar air quality profiles, guiding environmental policy, and determining pollution control strategies.
+
+Current date: Friday, January 31, 2025, at 1 AM +0545.

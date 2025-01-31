@@ -1,0 +1,47 @@
+Anomaly Detection Analysis
+
+---
+
+Objective:
+The objective of the anomaly detection was to identify data points that are far from their assigned cluster centroids, suggesting potential outliers in the air quality dataset.
+
+---
+
+Outlier Identification:
+The outliers were detected based on the distance from each data point to its respective cluster centroid. Any data point with a distance greater than the 95th percentile of all distances was considered an anomaly.
+
+- **Threshold for Outliers:** 3.7765 (95th percentile of distances)
+- **Number of Outliers Detected:** 468 data points
+
+---
+
+Outliers:
+The identified anomalies include data points that are significantly farther from their respective centroids than the majority of the data. These outliers could represent rare, unusual, or extreme air quality conditions, or they might indicate errors or inconsistencies in the data.
+
+**Example Outliers:**
+- Cluster 0, Distance: 4.940383
+- Cluster 2, Distance: 3.911260
+- Cluster 1, Distance: 4.094732
+
+---
+
+Visualization:
+The anomalies are visualized on a PCA-transformed plot, where:
+- Data points are color-coded based on their assigned cluster.
+- Outliers are marked in red with an 'x'.
+
+This visualization makes it clear how the anomalies are distributed in the reduced 2D space and their separation from the rest of the data.
+
+---
+
+Interpretation and Significance:
+- **Potential Causes:** These anomalies could be caused by unusual environmental factors, sensor malfunctions, or extreme pollution events.
+  
+- **Contextual Importance:** In air quality monitoring, detecting these outliers is essential as they might signify instances of pollution spikes, unusual atmospheric conditions, or even incorrect sensor readings. Understanding the characteristics of these outliers could help improve the monitoring systems and provide better responses to extreme air quality events.
+
+---
+
+Next Steps:
+Further investigation could be done to determine whether these outliers have any common geographical, temporal, or environmental factors. Additionally, techniques like data cleaning or more advanced outlier detection methods can be applied to refine the results.
+
+This analysis successfully identifies and visualizes potential outliers in the dataset, highlighting areas of interest that could warrant further investigation.
